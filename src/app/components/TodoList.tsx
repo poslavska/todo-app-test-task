@@ -91,15 +91,15 @@ export default function Todos() {
         <div className='w-full max-w-[1000px] flex flex-col items-center'>
           <span className='h-[2px] bg-[#609ce1] w-full mb-6'></span>
           <div className='flex flex-col items-center text-center gap-[0.5em] mb-8'>
-            <p className='text-[1.25rem] font-semibold'>{data.length} tasks</p>
+            <p className='text-[1.25rem] font-semibold'>{data.length} task{data.length > 1 ? "s" : ""}</p>
             <p className='text-[1.125rem]'>
               You have{' '}
               <span className='font-semibold'>{countCompletedTasks(data)}</span>{' '}
-              🎯 completed tasks and{' '}
+              🎯 completed task{countCompletedTasks(data) > 1 ? "s" : ""} and{' '}
               <span className='font-semibold'>
                 {countUncompletedTasks(data)}
               </span>{' '}
-              ⏳ uncompleted tasks
+              ⏳ uncompleted task{countUncompletedTasks(data) > 1 ? "s" : ""}
             </p>
           </div>
           <div className='flex flex-col gap-8 md:flex-row md:flex-wrap md:justify-around md:items-center sm:gap-[2.75em]'>
