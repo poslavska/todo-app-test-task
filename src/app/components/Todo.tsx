@@ -35,7 +35,7 @@ export default function Todo({ id, title, completed, deleteTodo }: TodoProps) {
       <div className='flex justify-between gap-[2em] bg-[var(--background)] rounded-[5px] py-[0.625em] px-4'>
         <div className={`flex flex-col ${completedStyle}`}>
           <p className='font-semibold text-[1.125rem]'>Task #{id}</p>
-          <label className='flex gap-[0.5em] mt-[1.5em]'>
+          <label className='flex gap-[0.5em] mt-[1.5em] cursor-pointer'>
             <input
               type='checkbox'
               name='todoCheckbox'
